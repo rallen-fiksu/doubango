@@ -81,15 +81,15 @@ make && make install
 cd ~/work/
 
 ## Application (x64) ##
-#wget http://sourceforge.net/projects/openofficeorg.mirror/files/4.0.0/binaries/enUS/Apache_OpenOffice_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz
-#mkdir -p OpenOfficeApplication && tar -zxvf Apache_OpenOffice_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz -C OpenOfficeApplication
-#rpm -Uvih OpenOfficeApplication/en-US/RPMS/*rpm
-#cd ~/work/
+wget http://sourceforge.net/projects/openofficeorg.mirror/files/4.0.0/binaries/en-US/Apache_OpenOffice_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz
+mkdir -p OpenOfficeApplication && tar -zxvf Apache_OpenOffice_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz -C OpenOfficeApplication
+rpm -Uvih OpenOfficeApplication/en-US/RPMS/*rpm
+cd ~/work/
 
 ## SDK (x64) ##
-#wget http://sourceforge.net/projects/openofficeorg.mirror/files/4.0.0/binaries/SDK/Apache_OpenOffice-SDK_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz
-#mkdir -p OpenOfficeSDK && tar -zxvf Apache_OpenOffice-SDK_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz -C OpenOfficeSDK
-#rpm -Uvih OpenOfficeSDK/en-US/RPMS/*rpm
+wget http://sourceforge.net/projects/openofficeorg.mirror/files/4.0.0/binaries/SDK/Apache_OpenOffice-SDK_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz
+mkdir -p OpenOfficeSDK && tar -zxvf Apache_OpenOffice-SDK_4.0.0_Linux_x86-64_install-rpm_en-US.tar.gz -C OpenOfficeSDK
+rpm -Uvih OpenOfficeSDK/en-US/RPMS/*rpm
 
-#LD_LIBRARY_PATH=/opt/openoffice4/program:/opt/openoffice4/sdk/lib /opt/openoffice4/sdk/bin/cppumaker -BUCR -O /opt/openoffice4/sdk/includecpp /opt/openoffice4/program/types.rdb
-#cd ~/work/
+LD_LIBRARY_PATH=/opt/openoffice4/program:/opt/openoffice4/sdk/lib /opt/openoffice4/sdk/bin/cppumaker -BUCR -O /opt/openoffice4/sdk/includecpp /opt/openoffice4/program/types.rdb
+cd ~/work/
