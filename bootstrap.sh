@@ -94,3 +94,16 @@ rpm -Uvih OpenOfficeSDK/en-US/RPMS/*rpm
 
 LD_LIBRARY_PATH=/opt/openoffice4/program:/opt/openoffice4/sdk/lib /opt/openoffice4/sdk/bin/cppumaker -BUCR -O /opt/openoffice4/sdk/includecpp /opt/openoffice4/program/types.rdb
 cd ~/work/
+
+# Building the Telepresence System
+svn checkout http://doubango.googlecode.com/svn/branches/2.0/doubango doubango1
+cd doubango1 && ./autogen.sh && ./configure --with-speexdsp --with-ffmpeg
+make && make install
+cd ~/work/
+
+svn checkout https://telepresence.googlecode.com/svn/trunk/ telepresence
+cd telepresence
+./autogen.sh && ./configure
+make && make install
+make samples
+cd ~/work/
