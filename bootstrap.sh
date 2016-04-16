@@ -46,5 +46,5 @@ make && make install
 wget ftp://ftp.videolan.org/pub/x264/snapshots/last_x264.tar.bz2
 tar -xvjf last_x264.tar.bz2
 # the output directory may be difference depending on the version and date
-cd x264-snapshot-20121201-2245
+cd x264-snapshot-20160415-2245
 ./configure --enable-shared --enable-pic && make && make install
