@@ -35,3 +35,11 @@ cd opus-1.0.2
 svn co http://g729.googlecode.com/svn/trunk/ g729b
 cd g729b
 ./autogen.sh && ./configure --enable-static --disable-shared && make && make install
+
+svn co
+http://doubango.googlecode.com/svn/branches/2.0/doubango/thirdparties/scripts/ilbc
+cd ilbc
+wget http://www.ietf.org/rfc/rfc3951.txt
+awk -f extract.awk rfc3951.txt
+./autogen.sh && ./configure
+make && make install
