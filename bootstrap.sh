@@ -11,7 +11,7 @@ CFLAGS="-fPIC" ./configure --enable-pic && make && make install
 
 # OpenSSL version 1.0.1 is already installed by default in Centos 6.7 +
 
-yum -y install libogg-devel libvorbis-devel libtheora-devel speex-devel libvpx-devel gsm-devel freetype-devel
+yum -y install libogg-devel libvorbis-devel libtheora-devel speex-devel libvpx-devel gsm-devel freetype-devel java-1.7.0-openjdk
 
 wget http://downloads.xiph.org/releases/speex/speex-1.2beta3.tar.gz
 tar -xvzf speex-1.2beta3.tar.gz
