@@ -50,9 +50,9 @@ cd x264-snapshot-20160415-2245
 ./configure --enable-shared --enable-pic && make && make install
 
 #failing
-wget http://downloads.sourceforge.net/faac/faac-1.28.tar.bz2
-tar -xvjf faac-1.28.tar.bz2
-cd faac-1.28 && ./configure && make && make install
+#wget http://downloads.sourceforge.net/faac/faac-1.28.tar.bz2
+#tar -xvjf faac-1.28.tar.bz2
+#cd faac-1.28 && ./configure && make && make install
 
 # [1] checkout source code
 git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
