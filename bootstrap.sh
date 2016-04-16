@@ -11,7 +11,7 @@ CFLAGS="-fPIC" ./configure --enable-pic && make && make install
 
 # OpenSSL version 1.0.1 is already installed by default in Centos 6.7 +
 
-yum -y install libogg-devel libvorbis-devel libtheora-devel speex-devel libvpx-devel gsm-devel
+yum -y install libogg-devel libvorbis-devel libtheora-devel speex-devel libvpx-devel gsm-devel freetype-devel
 
 wget http://downloads.xiph.org/releases/speex/speex-1.2beta3.tar.gz
 tar -xvzf speex-1.2beta3.tar.gz
@@ -42,3 +42,9 @@ wget http://www.ietf.org/rfc/rfc3951.txt
 awk -f extract.awk rfc3951.txt
 ./autogen.sh && ./configure
 make && make install
+
+wget ftp://ftp.videolan.org/pub/x264/snapshots/last_x264.tar.bz2
+tar -xvjf last_x264.tar.bz2
+# the output directory may be difference depending on the version and date
+cd x264-snapshot-20121201-2245
+./configure --enable-shared --enable-pic && make && make install
