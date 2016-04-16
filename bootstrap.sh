@@ -53,3 +53,19 @@ cd x264-snapshot-20160415-2245
 wget http://downloads.sourceforge.net/faac/faac-1.28.tar.bz2
 tar -xvjf faac-1.28.tar.bz2
 cd faac-1.28 && ./configure && make && make install
+
+# [1] checkout source code
+git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
+cd ffmpeg
+# [2] grap a release branch
+git checkout n1.2
+# [3] configure source
+./configure --extra-cflags="-fPIC" --extra-ldflags="-lpthread" --enable-pic --enable-memalign-hack --enable-pthreads --enable-shared --disable-static --disable-network --enable-pthreads --disable-ffmpeg --disable-ffplay --disable-ffserver --disable-ffprobe --enable-gpl --disable-debug --enable-libfreetype --enable-libfaac --enable-nonfree --enable-libx264
+# [4] build and install
+make && make install
+
+wget http://kcat.strangesoft.net/openal-releases/openal-soft-1.15.1.tar.bz2
+tar -xvjf openal-soft-1.15.1.tar.bz2
+cd openal-soft-1.15.1/build
+cmake ..
+make && make install
