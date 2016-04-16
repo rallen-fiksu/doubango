@@ -48,3 +48,8 @@ tar -xvjf last_x264.tar.bz2
 # the output directory may be difference depending on the version and date
 cd x264-snapshot-20160415-2245
 ./configure --enable-shared --enable-pic && make && make install
+
+#failing
+wget http://downloads.sourceforge.net/faac/faac-1.28.tar.bz2
+tar -xvjf faac-1.28.tar.bz2
+cd faac-1.28 && ./configure && make && make install
