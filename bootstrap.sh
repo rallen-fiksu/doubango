@@ -31,3 +31,7 @@ wget http://downloads.xiph.org/releases/opus/opus-1.0.2.tar.gz
 tar -xvzf opus-1.0.2.tar.gz
 cd opus-1.0.2
 ./configure --with-pic --enable-float-approx && make && make install
+
+svn co http://g729.googlecode.com/svn/trunk/ g729b
+cd g729b
+./autogen.sh && ./configure --enable-static --disable-shared && make && make install
