@@ -17,3 +17,8 @@ wget http://downloads.xiph.org/releases/speex/speex-1.2beta3.tar.gz
 tar -xvzf speex-1.2beta3.tar.gz
 cd speex-1.2beta3
 ./configure --disable-oggtest --without-libogg && make && make install
+
+wget http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz
+tar -xvzf yasm-1.2.0.tar.gz
+cd yasm-1.2.0
+./configure && make && make install
